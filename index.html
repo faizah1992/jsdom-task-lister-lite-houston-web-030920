@@ -12,11 +12,22 @@
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type="number" min="1" max="10" name="quantity" >
       <input type="submit" value="Create New Task">
-    </form>
 
+    </form>
+    
     <div id="list">
+  
       <h2>My Todos</h2>
+      <form>
+        Select a task:
+        <br>
+        <select id="option" size="4">
+        </select><br>
+        <button onclick="deletetasks()">Remove selected task</button>
+      </form>
+  
       <ul id="tasks">
       </ul>
     </div>
